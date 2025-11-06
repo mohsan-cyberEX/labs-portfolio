@@ -1,11 +1,12 @@
 ﻿# Mohsan | CyberEX Security Portfolio
 
-Welcome. This site lists my best writeups and tools.
+Welcome! This portfolio shows my labs, automation scripts, and pwn research.
 
-## Featured
-- Web: SQL Injection writeup
-- Host: Linux PrivEsc
-- Pwn: Buffer overflow annotated exploit
+## Highlights
+- **Web Security:** SQL Injection, XSS, auth bypass
+- **Host Security:** Linux / Windows PrivEsc
+- **Pwn:** Buffer overflow and binary exploitation
+- **Automation:** Python / Bash scripts for enumeration
 
-## Contact
-GitHub: https://github.com/mohsan-cyberEX
+## Resume
+[Download Resume](../resume/resume.pdf)
