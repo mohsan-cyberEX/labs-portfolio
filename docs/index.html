@@ -1160,135 +1160,128 @@
     </section>
 
 <!-- Portfolio Section -->
-<section class="portfolio" id="portfolio">
+<section class="section portfolio" id="portfolio">
     <div class="container">
-        <h2>My Projects</h2>
-        <div class="project-grid">
-            <!-- Project 1: Python -->
-            <div class="project-card">
-                <img src="python_project.png" alt="Python Calculator">
-                <div class="project-info">
-                    <h3>Python Calculator</h3>
-                    <p>A simple command-line calculator to perform addition, subtraction, multiplication, and division.</p>
-                    <a href="https://github.com/mohsan-cyberEX/python-calculator" target="_blank">View Code</a>
+        <div class="section-title">
+            <h2>Learning & Practice</h2>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="labs">Labs</button>
+            <button class="filter-btn" data-filter="coding">Coding</button>
+            <button class="filter-btn" data-filter="networking">Networking</button>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div class="portfolio-grid">
+
+            <!-- Example Project Item -->
+            <div class="portfolio-item" data-category="labs">
+                <div class="portfolio-img">
+                    HTB Labs
+                </div>
+                <div class="portfolio-content">
+                    <h3>HTB Labs & CTFs</h3>
+                    <p>Practice hacking challenges and vulnerability analysis through Hack The Box labs and Capture The Flag exercises to develop practical penetration testing skills.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> HTB Profile</a>
+                    </div>
                 </div>
             </div>
-            <!-- Project 2: Python -->
-            <div class="project-card">
-                <img src="text_analyzer.png" alt="Python Text Analyzer">
-                <div class="project-info">
-                    <h3>Text Analyzer</h3>
-                    <p>Counts words, characters, and sentences in any text input using Python.</p>
-                    <a href="https://github.com/mohsan-cyberEX/python-text-analyzer" target="_blank">View Code</a>
+
+            <div class="portfolio-item" data-category="coding">
+                <div class="portfolio-img">
+                    Terminal Portfolio
+                </div>
+                <div class="portfolio-content">
+                    <h3>Terminal Portfolio</h3>
+                    <p>Building a personal portfolio with interactive terminal UI to showcase skills and projects in a cybersecurity-themed interface.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
                 </div>
             </div>
-            <!-- Project 3: C++ / DSA -->
-            <div class="project-card">
-                <img src="cpp_dsa.png" alt="DSA Practice">
-                <div class="project-info">
-                    <h3>DSA Practice</h3>
-                    <p>Collection of C++ implementations for arrays, linked lists, sorting, and basic algorithms.</p>
-                    <a href="https://github.com/mohsan-cyberEX/dsa-practice" target="_blank">View Code</a>
+
+            <div class="portfolio-item" data-category="coding">
+                <div class="portfolio-img">
+                    C++ Data Structures
+                </div>
+                <div class="portfolio-content">
+                    <h3>C++ Data Structures Labs</h3>
+                    <p>Implementing linked lists, stacks, queues, and trees to build a strong programming foundation for security tool development and algorithm understanding.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fab fa-github"></i> Code Examples</a>
+                    </div>
                 </div>
             </div>
-            <!-- Project 4: C++ / DSA -->
-            <div class="project-card">
-                <img src="linkedlist.png" alt="Linked List Project">
-                <div class="project-info">
-                    <h3>Linked List Manager</h3>
-                    <p>Singly linked list implementation in C++ with add, delete, and display operations.</p>
-                    <a href="https://github.com/mohsan-cyberEX/linkedlist-project" target="_blank">View Code</a>
+
+            <div class="portfolio-item" data-category="networking">
+                <div class="portfolio-img">
+                    Networking Labs
+                </div>
+                <div class="portfolio-content">
+                    <h3>Networking Labs</h3>
+                    <p>Setting up virtual networks, capturing packets with Wireshark, and analyzing network traffic to understand protocols and identify potential security issues.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Lab Notes</a>
+                    </div>
                 </div>
             </div>
-            <!-- Project 5: Cybersecurity / HTB -->
-            <div class="project-card">
-                <img src="htb_labs.png" alt="Cybersecurity Labs">
-                <div class="project-info">
-                    <h3>Cybersecurity Labs</h3>
-                    <p>Hands-on penetration testing and network security lab exercises documented and coded.</p>
-                    <a href="https://github.com/mohsan-cyberEX/htb-labs" target="_blank">View Code</a>
+
+            <div class="portfolio-item" data-category="labs">
+                <div class="portfolio-img">
+                    Security Tools
+                </div>
+                <div class="portfolio-content">
+                    <h3>Security Tools Practice</h3>
+                    <p>Hands-on experience with Nmap, Wireshark, and Burp Suite for scanning, packet analysis, and web security testing.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Tool Configs</a>
+                    </div>
                 </div>
             </div>
-            <!-- Project 6: Cybersecurity / HTB -->
-            <div class="project-card">
-                <img src="port_scanner.png" alt="Port Scanner Project">
-                <div class="project-info">
-                    <h3>Port Scanner</h3>
-                    <p>Python script to scan open ports on a local network or machine.</p>
-                    <a href="https://github.com/mohsan-cyberEX/port-scanner" target="_blank">View Code</a>
+
+            <div class="portfolio-item" data-category="coding">
+                <div class="portfolio-img">
+                    Python Scripts
+                </div>
+                <div class="portfolio-content">
+                    <h3>Python Script Development</h3>
+                    <p>Creating basic security scripts and automation tools in Python to understand how security tools work and develop custom solutions.</p>
+                    <div class="portfolio-links">
+                        <a href="#"><i class="fab fa-github"></i> Scripts</a>
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
 
+<script>
+    // Portfolio Filtering
+    const filterBtns = document.querySelectorAll(".filter-btn");
+    const portfolioItems = document.querySelectorAll(".portfolio-item");
 
-<style>
-    .portfolio {
-        padding: 60px 0;
-        background-color: #fff;
-        text-align: center;
-    }
+    filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            filterBtns.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            const filter = btn.dataset.filter;
 
-    .portfolio h2 {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-    }
+            portfolioItems.forEach(item => {
+                if (filter === "all" || item.dataset.category === filter) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
 
-    .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 30px;
-        max-width: 1200px;
-        margin: auto;
-    }
-
-    .project-card {
-        background-color: #f5f5f5;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
-        text-align: left;
-    }
-
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .project-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-    }
-
-    .project-info {
-        padding: 15px 20px;
-    }
-
-    .project-info h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-
-    .project-info p {
-        font-size: 0.95rem;
-        margin-bottom: 10px;
-    }
-
-    .project-info a {
-        text-decoration: none;
-        color: #fff;
-        background-color: #007bff;
-        padding: 8px 15px;
-        border-radius: 5px;
-        transition: background 0.3s;
-    }
-
-    .project-info a:hover {
-        background-color: #0056b3;
-    }
 </style>
 
 
