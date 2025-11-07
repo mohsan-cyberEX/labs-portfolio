@@ -965,20 +965,71 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1>MOH SAN CYBER<span>EX</span></h1>
-                <p>I'm <span class="typing-text" id="typing-text"></span></p>
-                <p>A cybersecurity student actively learning ethical hacking, penetration testing, and system security. Focused on building practical skills through labs, exercises, and guided learning.</p>
-                <div class="hero-btns">
-                    <a href="#portfolio" class="btn btn-primary">View My Learning</a>
-                    <a href="#contact" class="btn btn-outline">Contact Me</a>
-                </div>
-            </div>
+    <!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Hello, I'm <span class="name">Mohsan CyberEX</span></h1>
+            <h2>I am a <span class="typed-text"></span><span class="cursor">|</span></h2>
+            <p>Learning & practicing penetration testing, C++, and Data Structures & Algorithms step by step.</p>
+            <a href="#portfolio" class="btn">View My Work</a>
         </div>
-        <div class="hero-shape"></div>
-    </section>
+    </div>
+</section>
+
+<script>
+    // Typing Effect
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+
+    const textArray = ["Cybersecurity Enthusiast", "C++ Programmer", "DSA Learner"];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 1500; // Pause before next text
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+            charIndex++;
+            setTimeout(type, typingDelay);
+        } else {
+            setTimeout(erase, newTextDelay);
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, erasingDelay);
+        } else {
+            textArrayIndex++;
+            if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+            setTimeout(type, typingDelay + 500);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        if (textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+</script>
+
+<style>
+    .cursor {
+        display: inline-block;
+        background-color: #000;
+        width: 2px;
+        margin-left: 2px;
+        animation: blink 0.7s infinite;
+    }
+
+    @keyframes blink {
+        0%, 50%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+    }
+</style>
 
     <!-- About Section -->
     <section class="section about" id="about">
