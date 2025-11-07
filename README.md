@@ -20,9 +20,9 @@ This is my portfolio website showcasing my **skills, mini-projects, and educatio
 | Skill        | Proficiency |
 | ------------ | ----------- |
 | Python       | 60%         |
-| Linux        | 50%         |
-| Networking   | 55%         |
-| Git / GitHub | 70%         |
+| Linux        | 30%         |
+| Networking   | 20%         |
+| Git / GitHub | 50%         |
 
 ---
 
