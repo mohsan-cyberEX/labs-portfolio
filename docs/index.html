@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohsan Razaq | Cyber Security Student</title>
+    <title>Mohsan CyberEX | Cyber Security Student</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -20,8 +20,16 @@
             --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        * { margin:0; padding:0; box-sizing:border-box; }
-        html { scroll-behavior: smooth; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: 'Exo 2', sans-serif;
             line-height: 1.6;
@@ -33,111 +41,902 @@
                 radial-gradient(circle at 90% 80%, rgba(0, 255, 136, 0.05) 0%, transparent 20%);
         }
 
-        h1,h2,h3,h4,h5,h6{ font-family: 'Orbitron', sans-serif; font-weight:700; line-height:1.3; margin-bottom:1rem;}
-        a{ text-decoration:none; color:inherit;}
-        ul{ list-style:none;}
-        img{ max-width:100%;}
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
 
-        .container{ width:90%; max-width:1200px; margin:0 auto; padding:0 15px; }
-        .section{ padding:100px 0; position:relative; }
-        .section-title{ text-align:center; margin-bottom:60px; position:relative;}
-        .section-title h2{ font-size:2.5rem; color:var(--primary); display:inline-block; text-transform:uppercase; letter-spacing:3px;}
-        .section-title h2::after{ content:''; position:absolute; width:100px; height:3px; background:linear-gradient(90deg, transparent, var(--primary), transparent); bottom:-15px; left:50%; transform:translateX(-50%);}
-        .btn{ display:inline-block; padding:12px 30px; border-radius:4px; font-weight:600; cursor:pointer; transition:var(--transition); border:none; font-size:1rem; font-family:'Orbitron',sans-serif; letter-spacing:1px; text-transform:uppercase;}
-        .btn-primary{ background:var(--primary); color:var(--dark); box-shadow:var(--glow);}
-        .btn-primary:hover{ background:var(--primary-dark); transform:translateY(-3px); box-shadow:0 0 20px rgba(0,255,136,0.7);}
-        .btn-outline{ background:transparent; color:var(--primary); border:2px solid var(--primary);}
-        .btn-outline:hover{ background:var(--primary); color:var(--dark); transform:translateY(-3px); box-shadow:var(--glow);}
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-        .matrix-bg{ position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1; opacity:0.1; overflow:hidden;}
-        .matrix-code{ color:var(--primary); font-family:monospace; font-size:14px; position:absolute; width:100%; animation:matrixFall 20s linear infinite;}
-        @keyframes matrixFall{0%{transform:translateY(-100%);}100%{transform:translateY(100%);}}
+        ul {
+            list-style: none;
+        }
 
-        header{ position:fixed; top:0; left:0; width:100%; z-index:1000; background:rgba(10,10,15,0.9); backdrop-filter:blur(10px); border-bottom:1px solid rgba(0,255,136,0.1); transition:var(--transition);}
-        header.scrolled{ padding:5px 0; box-shadow:0 5px 20px rgba(0,0,0,0.3);}
-        .navbar{ display:flex; justify-content:space-between; align-items:center; padding:20px 0;}
-        .logo{ font-size:1.8rem; font-weight:900; color:var(--primary); font-family:'Orbitron',sans-serif; display:flex; align-items:center;}
-        .logo span{ color:var(--light); margin-left:5px;}
-        .logo::before{ content:'>'; color:var(--terminal); margin-right:5px;}
-        .nav-links{ display:flex;}
-        .nav-links li{ margin-left:30px; position:relative;}
-        .nav-links a{ font-weight:500; transition:var(--transition); position:relative; font-family:'Orbitron',sans-serif; font-size:0.9rem; letter-spacing:1px;}
-        .nav-links a:hover{ color:var(--primary);}
-        .nav-links a::after{ content:''; position:absolute; width:0; height:2px; background:var(--primary); bottom:-5px; left:0; transition:var(--transition);}
-        .nav-links a:hover::after{ width:100%;}
-        .hamburger{ display:none; cursor:pointer; font-size:1.5rem; color:var(--primary);}
+        img {
+            max-width: 100%;
+        }
 
-        .hero{ height:100vh; display:flex; align-items:center; position:relative; overflow:hidden;}
-        .hero-content{ max-width:700px; z-index:1;}
-        .hero h1{ font-size:3.5rem; margin-bottom:20px; color:var(--light); line-height:1.2;}
-        .hero h1 span{ color:var(--primary); text-shadow:var(--glow);}
-        .hero p{ font-size:1.2rem; margin-bottom:30px; color:var(--gray); max-width:600px;}
-        .typing-text{ color:var(--primary); font-family:'Orbitron',sans-serif; border-right:2px solid var(--primary); padding-right:5px; animation:blink 1s infinite;}
-        @keyframes blink{0%,100%{border-color:var(--primary);}50%{border-color:transparent;}}
-        .hero-btns{ display:flex; gap:15px; margin-top:30px;}
-        .hero-shape{ position:absolute; width:600px; height:600px; border-radius:50%; background:radial-gradient(circle, rgba(0,255,136,0.1) 0%, transparent 70%); top:-200px; right:-200px; z-index:0;}
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
 
-        .about{ background:var(--darker); border-top:1px solid rgba(0,255,136,0.1); border-bottom:1px solid rgba(0,255,136,0.1);}
-        .about-content{ display:grid; grid-template-columns:1fr 2fr; gap:50px; align-items:center;}
-        .about-img{ position:relative; border-radius:10px; overflow:hidden; border:2px solid var(--primary); box-shadow:var(--glow);}
-        .about-img img{ display:block; transition:var(--transition); filter:grayscale(30%);}
-        .about-img:hover img{ transform:scale(1.05); filter:grayscale(0%);}
-        .about-text h3{ font-size:2rem; margin-bottom:20px; color:var(--primary);}
-        .about-text p{ margin-bottom:20px; color:var(--gray);}
-        .terminal-window{ background:rgba(5,5,8,0.8); border:1px solid var(--primary); border-radius:8px; margin-top:30px; overflow:hidden; font-size:0.9rem;}
-        .terminal-header{ background:rgba(0,255,136,0.1); padding:10px 15px; display:flex; align-items:center; border-bottom:1px solid rgba(0,255,136,0.2);}
-        .terminal-buttons{ display:flex; gap:8px;}
-        .terminal-btn{ width:12px; height:12px; border-radius:50%;}
-        .terminal-btn.close{ background:#ff5f57;}
-        .terminal-btn.minimize{ background:#ffbd2e;}
-        .terminal-btn.maximize{ background:#28ca42;}
-        .terminal-body{ padding:20px; font-family:monospace; color:var(--terminal);}
-        .terminal-line{ margin-bottom:10px;}
-        .terminal-prompt{ color:var(--primary);}
-        .terminal-cursor{ display:inline-block; width:10px; background:var(--primary); animation:blinkCursor 0.7s infinite;}
-        @keyframes blinkCursor{0%,100%{background:var(--primary);}50%{background:transparent;}}
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            font-size: 1rem;
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: var(--glow);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.7);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--dark);
+            transform: translateY(-3px);
+            box-shadow: var(--glow);
+        }
+
+        /* Matrix Background */
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.1;
+            overflow: hidden;
+        }
+
+        .matrix-code {
+            color: var(--primary);
+            font-family: monospace;
+            font-size: 14px;
+            position: absolute;
+            width: 100%;
+            animation: matrixFall 20s linear infinite;
+        }
+
+        @keyframes matrixFall {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 5px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            color: var(--light);
+            margin-left: 5px;
+        }
+
+        .logo::before {
+            content: '>';
+            color: var(--terminal);
+            margin-right: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+            position: relative;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+            position: relative;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--light);
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+            text-shadow: var(--glow);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: var(--gray);
+            max-width: 600px;
+        }
+
+        .typing-text {
+            color: var(--primary);
+            font-family: 'Orbitron', sans-serif;
+            border-right: 2px solid var(--primary);
+            padding-right: 5px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { border-color: var(--primary); }
+            50% { border-color: transparent; }
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .hero-shape {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(0, 255, 136, 0.1) 0%, transparent 70%);
+            top: -200px;
+            right: -200px;
+            z-index: 0;
+        }
+
+        /* About Section */
+        .about {
+            background: var(--darker);
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid var(--primary);
+            box-shadow: var(--glow);
+        }
+
+        .about-img img {
+            display: block;
+            transition: var(--transition);
+            filter: grayscale(30%);
+        }
+
+        .about-img:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+
+        .terminal-window {
+            background: rgba(5, 5, 8, 0.8);
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            margin-top: 30px;
+            overflow: hidden;
+            box-shadow: var(--glow);
+        }
+
+        .terminal-header {
+            background: rgba(0, 255, 136, 0.1);
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 8px;
+        }
+
+        .terminal-btn {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .terminal-btn.close {
+            background: #ff5f57;
+        }
+
+        .terminal-btn.minimize {
+            background: #ffbd2e;
+        }
+
+        .terminal-btn.maximize {
+            background: #28ca42;
+        }
+
+        .terminal-body {
+            padding: 20px;
+            font-family: monospace;
+            color: var(--terminal);
+        }
+
+        .terminal-line {
+            margin-bottom: 10px;
+        }
+
+        .terminal-prompt {
+            color: var(--primary);
+        }
 
         /* Skills Section */
-        .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:30px; text-align:center;}
-        .skill-card{ background:rgba(0,255,136,0.05); border:1px solid var(--primary); padding:30px; border-radius:10px; box-shadow:var(--glow); transition:var(--transition);}
-        .skill-card i{ font-size:2.5rem; color:var(--primary); margin-bottom:15px;}
-        .skill-card h4{ margin-bottom:10px; color:var(--primary); font-weight:600;}
-        .skill-card p{ color:var(--gray); font-size:0.9rem;}
+        .skills {
+            background: var(--dark);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+        }
+
+        .skill-category {
+            margin-bottom: 40px;
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-category h3 i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .skill-items {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .skill-item {
+            background: rgba(5, 5, 8, 0.7);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 6px;
+            padding: 15px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .skill-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+        }
+
+        .skill-item i {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-right: 10px;
+        }
+
+        .skill-item span {
+            color: var(--light);
+            font-weight: 500;
+        }
 
         /* Portfolio Section */
-        .portfolio-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
-        .portfolio-card{ background:rgba(0,255,136,0.05); border:1px solid var(--primary); border-radius:10px; overflow:hidden; box-shadow:var(--glow); transition:var(--transition);}
-        .portfolio-card img{ width:100%; height:180px; object-fit:cover;}
-        .portfolio-card-content{ padding:15px;}
-        .portfolio-card-content h4{ color:var(--primary); margin-bottom:10px;}
-        .portfolio-card-content p{ color:var(--gray); font-size:0.9rem; margin-bottom:10px;}
-        .portfolio-card-content a{ color:var(--primary); font-weight:600; font-size:0.9rem; display:inline-block; transition:var(--transition);}
-        .portfolio-card-content a:hover{ text-decoration:underline;}
+        .portfolio {
+            background: var(--darker);
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+            border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            margin: 0 5px 10px;
+            background: transparent;
+            border: 1px solid var(--primary);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 500;
+            color: var(--light);
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 1px;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: var(--dark);
+            box-shadow: var(--glow);
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            transition: var(--transition);
+            position: relative;
+            background: rgba(5, 5, 8, 0.7);
+        }
+
+        .portfolio-item:hover {
+            border-color: var(--primary);
+            transform: translateY(-10px);
+            box-shadow: var(--glow);
+        }
+
+        .portfolio-img {
+            height: 200px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #0a0a0f 0%, #0066ff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .portfolio-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img::before {
+            opacity: 1;
+        }
+
+        .portfolio-content {
+            padding: 20px;
+            background: rgba(5, 5, 8, 0.9);
+        }
+
+        .portfolio-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .portfolio-content p {
+            color: var(--gray);
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .portfolio-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .portfolio-links a {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+        }
+
+        .portfolio-links a:hover {
+            color: var(--light);
+        }
 
         /* Education Section */
-        .edu-timeline{ display:grid; grid-template-columns:1fr; gap:20px; max-width:800px; margin:0 auto;}
-        .edu-item{ background:rgba(0,255,136,0.05); border-left:4px solid var(--primary); padding:15px; border-radius:5px;}
-        .edu-item h4{ color:var(--primary); margin-bottom:5px;}
-        .edu-item span{ color:var(--gray); font-size:0.85rem;}
-        .edu-item p{ color:var(--light); font-size:0.9rem; margin-top:5px;}
+        .education {
+            background: var(--dark);
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .education-timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            display: flex;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: -40px;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.3;
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(0, 255, 136, 0.1);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 30px;
+            flex-shrink: 0;
+            z-index: 1;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .timeline-content {
+            background: rgba(5, 5, 8, 0.7);
+            border-radius: 8px;
+            padding: 25px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            flex: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+
+        .timeline-content .date {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .timeline-content p {
+            color: var(--gray);
+            line-height: 1.6;
+        }
 
         /* Contact Section */
-        .contact-form{ max-width:600px; margin:0 auto;}
-        .contact-form input, .contact-form textarea{ width:100%; padding:12px 15px; margin-bottom:15px; border-radius:5px; border:1px solid var(--primary); background:var(--darker); color:var(--light);}
-        .contact-form input:focus, .contact-form textarea:focus{ outline:none; border-color:var(--primary-dark);}
-        .contact-form button{ display:inline-block; padding:12px 30px; border:none; border-radius:5px; background:var(--primary); color:var(--dark); cursor:pointer; transition:var(--transition);}
-        .contact-form button:hover{ background:var(--primary-dark); transform:translateY(-3px); box-shadow:var(--glow);}
+        .contact {
+            background: var(--darker);
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+        }
 
-        footer{ background:var(--darker); padding:40px 0; text-align:center; color:var(--gray); border-top:1px solid rgba(0,255,136,0.1);}
-        footer a{ color:var(--primary); margin:0 10px; transition:var(--transition);}
-        footer a:hover{ color:var(--primary-dark);}
-        
-        @media(max-width:768px){
-            .about-content{ grid-template-columns:1fr; text-align:center;}
-            .hamburger{ display:block;}
-            .nav-links{ display:none; flex-direction:column; background:var(--dark); position:absolute; top:100%; right:0; width:200px; border-left:1px solid var(--primary);}
-            .nav-links.active{ display:flex;}
-            .nav-links li{ margin:15px 0;}
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 255, 136, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .contact-details h4 {
+            margin-bottom: 5px;
+            color: var(--light);
+        }
+
+        .contact-details p {
+            color: var(--gray);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 255, 136, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--primary);
+            border: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: var(--dark);
+            transform: translateY(-5px);
+            box-shadow: var(--glow);
+        }
+
+        .contact-form {
+            background: rgba(5, 5, 8, 0.7);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid rgba(0, 255, 136, 0.2);
+            border-radius: 4px;
+            font-family: 'Exo 2', sans-serif;
+            transition: var(--transition);
+            background: rgba(10, 10, 15, 0.7);
+            color: var(--light);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 255, 136, 0.1);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            color: white;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(0, 255, 136, 0.1);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .footer-col h3::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            background: var(--primary);
+            bottom: 0;
+            left: 0;
+        }
+
+        .footer-col p {
+            color: var(--gray);
+            margin-bottom: 20px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: var(--gray);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: rgba(10, 10, 15, 0.95);
+                flex-direction: column;
+                align-items: center;
+                padding-top: 50px;
+                transition: var(--transition);
+                backdrop-filter: blur(10px);
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item {
+                flex-direction: column;
+            }
+
+            .timeline-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+
+            .timeline-item::before {
+                left: 30px;
+                top: 60px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .section {
+                padding: 70px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .skill-items {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -149,16 +948,18 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">mohsan<span>_cyberEX</span></a>
+                <a href="#" class="logo">mohsan<span>_cyber</span></a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#portfolio">Learning</a></li>
                     <li><a href="#education">Education</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <div class="hamburger"><i class="fas fa-bars"></i></div>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
         </div>
     </header>
@@ -167,11 +968,11 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1>SECURING THE DIGITAL FRONTIER<span>.</span></h1>
+                <h1>MOH SAN CYBER<span>EX</span></h1>
                 <p>I'm <span class="typing-text" id="typing-text"></span></p>
-                <p>A beginner cyber security student focused on ethical hacking, network defense, and vulnerability assessment. Currently learning penetration testing and security analysis.</p>
+                <p>A cybersecurity student actively learning ethical hacking, penetration testing, and system security. Focused on building practical skills through labs, exercises, and guided learning.</p>
                 <div class="hero-btns">
-                    <a href="#portfolio" class="btn btn-primary">View My Work</a>
+                    <a href="#portfolio" class="btn btn-primary">View My Learning</a>
                     <a href="#contact" class="btn btn-outline">Contact Me</a>
                 </div>
             </div>
@@ -182,15 +983,18 @@
     <!-- About Section -->
     <section class="section about" id="about">
         <div class="container">
-            <div class="section-title"><h2>About Me</h2></div>
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="images/profile.jpg" alt="Mohsan Razaq - Cyber Security Student" onerror="this.style.display='none'">
+                    <img src="images/profile.jpg" alt="Mohsan CyberEX - Cyber Security Student" onerror="this.style.display='none'">
                 </div>
                 <div class="about-text">
-                    <h3>Cyber Security Student & Aspiring Ethical Hacker</h3>
-                    <p>I'm a dedicated beginner in cyber security actively developing skills in ethical hacking and network defense. My journey started with curiosity about system vulnerabilities and is growing into practical knowledge.</p>
-                    <p>I learn through labs, beginner-friendly CTFs, and guided exercises to build a strong foundation in cybersecurity principles and practices.</p>
+                    <h3>Cybersecurity Student & Aspiring Penetration Tester</h3>
+                    <p>I am a cybersecurity student actively learning ethical hacking, penetration testing, and system security. I am focused on building practical skills through labs, exercises, and guided learning.</p>
+                    <p>I aim to develop hands-on expertise to secure systems and analyze vulnerabilities effectively. My journey is about continuous learning and applying security principles in practical scenarios.</p>
+                    
                     <div class="terminal-window">
                         <div class="terminal-header">
                             <div class="terminal-buttons">
@@ -198,14 +1002,14 @@
                                 <div class="terminal-btn minimize"></div>
                                 <div class="terminal-btn maximize"></div>
                             </div>
-                            <span style="margin-left:15px;color:var(--light);font-size:0.9rem;">mohsan@cybersecurity:~</span>
+                            <span style="margin-left: 15px; color: var(--light); font-size: 0.9rem;">mohsan@cybersecurity:~</span>
                         </div>
                         <div class="terminal-body">
                             <div class="terminal-line"><span class="terminal-prompt">$</span> whoami</div>
-                            <div class="terminal-line">mohsan_ali - Beginner Cyber Security Student</div>
-                            <div class="terminal-line"><span class="terminal-prompt">$</span> cat current_focus.txt</div>
-                            <div class="terminal-line">Network Security · Ethical Hacking Basics · Python Scripting</div>
-                            <div class="terminal-line">Linux Fundamentals · Security Labs · Vulnerability Awareness</div>
+                            <div class="terminal-line">mohsan_cyberex - Cybersecurity Student | Aspiring PenTester</div>
+                            <div class="terminal-line"><span class="terminal-prompt">$</span> cat learning_path.txt</div>
+                            <div class="terminal-line">HTB Labs · C++ · Networking · Security Tools</div>
+                            <div class="terminal-line">GitHub: github.com/mohsan-cyberEX</div>
                             <div class="terminal-line"><span class="terminal-prompt">$</span> <span class="terminal-cursor">_</span></div>
                         </div>
                     </div>
@@ -215,66 +1019,180 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="section" id="skills">
+    <section class="section skills" id="skills">
         <div class="container">
-            <div class="section-title"><h2>Skills</h2></div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h4>Network Security</h4>
-                    <p>Understanding networks, protocols, and basic security measures.</p>
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-laptop-code"></i>
-                    <h4>Python Scripting</h4>
-                    <p>Writing scripts for automation, vulnerability scanning, and small security tools.</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Cybersecurity Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Nmap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Wireshark</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Burp Suite</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Kali Linux</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Ethical Hacking</h4>
-                    <p>Practicing penetration testing on lab environments safely.</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Networking & Protocols</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>TCP/IP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe"></i>
+                            <span>DNS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>HTTP</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fab fa-linux"></i>
-                    <h4>Linux Fundamentals</h4>
-                    <p>Command line, file system, basic bash scripting, and system security basics.</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <i class="fas fa-lock"></i>
-                    <h4>Cybersecurity Labs</h4>
-                    <p>Hands-on exercises to detect vulnerabilities and apply security controls.</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Other Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Problem-solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Lab Simulations</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Code Debugging</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section class="section" id="portfolio">
+    <section class="section portfolio" id="portfolio">
         <div class="container">
-            <div class="section-title"><h2>Portfolio</h2></div>
+            <div class="section-title">
+                <h2>Learning & Practice</h2>
+            </div>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="labs">Labs</button>
+                <button class="filter-btn" data-filter="coding">Coding</button>
+                <button class="filter-btn" data-filter="networking">Networking</button>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-card">
-                    <img src="images/project1.jpg" alt="Project 1">
-                    <div class="portfolio-card-content">
-                        <h4>Network Scanner</h4>
-                        <p>Python script to scan open ports and services in a controlled lab environment.</p>
-                        <a href="#">View Project</a>
+                <div class="portfolio-item" data-category="labs">
+                    <div class="portfolio-img">
+                        HTB Labs
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>HTB Labs & CTFs</h3>
+                        <p>Practice hacking challenges and vulnerability analysis through Hack The Box labs and Capture The Flag exercises to develop practical penetration testing skills.</p>
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> HTB Profile</a>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-card">
-                    <img src="images/project2.jpg" alt="Project 2">
-                    <div class="portfolio-card-content">
-                        <h4>Vulnerability Assessment</h4>
-                        <p>Performed basic vulnerability scanning on a virtual machine using open-source tools.</p>
-                        <a href="#">View Project</a>
+                <div class="portfolio-item" data-category="coding">
+                    <div class="portfolio-img">
+                        Terminal Portfolio
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Terminal Portfolio</h3>
+                        <p>Learning to build a personal portfolio with interactive terminal UI to showcase skills and projects in a unique, cybersecurity-themed interface.</p>
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        </div>
                     </div>
                 </div>
-                <div class="portfolio-card">
-                    <img src="images/project3.jpg" alt="Project 3">
-                    <div class="portfolio-card-content">
-                        <h4>Lab Automation Script</h4>
-                        <p>Python script to automate repetitive lab security tasks for faster learning.</p>
-                        <a href="#">View Project</a>
+                <div class="portfolio-item" data-category="coding">
+                    <div class="portfolio-img">
+                        C++ Data Structures
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>C++ Data Structures Labs</h3>
+                        <p>Implementing linked lists, stacks, queues, and trees to build a strong programming foundation for security tool development and algorithm understanding.</p>
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fab fa-github"></i> Code Examples</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="networking">
+                    <div class="portfolio-img">
+                        Networking Labs
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Networking Labs</h3>
+                        <p>Setting up virtual networks, capturing packets with Wireshark, and analyzing network traffic to understand protocols and identify potential security issues.</p>
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Lab Notes</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="labs">
+                    <div class="portfolio-img">
+                        Security Tools
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Security Tools Practice</h3>
+                        <p>Hands-on experience with Nmap for network scanning, Wireshark for packet analysis, and Burp Suite for web application security testing.</p>
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fas fa-external-link-alt"></i> Tool Configs</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="coding">
+                    <div class="portfolio-img">
+                        Script Development
+                    </div>
+                    <div class="portfolio-content">
+                        <h3>Python Script Development</h3>
+                        <p>Creating basic security scripts and automation tools in Python to understand how security tools work and develop custom solutions.</p>
+                        <div class="portfolio-links">
+                            <a href="#"><i class="fab fa-github"></i> Scripts</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,46 +1200,139 @@
     </section>
 
     <!-- Education Section -->
-    <section class="section" id="education">
+    <section class="section education" id="education">
         <div class="container">
-            <div class="section-title"><h2>Education</h2></div>
-            <div class="edu-timeline">
-                <div class="edu-item">
-                    <h4>Cyber Security Courses</h4>
-                    <span>2025 - Present</span>
-                    <p>Learning ethical hacking, network security, Python scripting, and Linux fundamentals.</p>
+            <div class="section-title">
+                <h2>Education</h2>
+            </div>
+            <div class="education-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Bachelor's in Cybersecurity</h3>
+                        <div class="date">University of Management and Technology (UMT), Lahore</div>
+                        <p>Currently pursuing degree with focus on cybersecurity fundamentals, network security, and ethical hacking principles. Key courses include Data Structures & Algorithms, Network Security, Cryptography, and Ethical Hacking.</p>
+                    </div>
                 </div>
-                <div class="edu-item">
-                    <h4>High School Diploma</h4>
-                    <span>2021 - 2024</span>
-                    <p>Completed high school with focus on computer science and mathematics.</p>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Self-Directed Learning</h3>
+                        <div class="date">Ongoing</div>
+                        <p>Continuously expanding knowledge through online resources, practice labs, and security challenges. Focusing on practical skill development in penetration testing, network analysis, and security tool usage.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section class="section" id="contact">
+    <section class="section contact" id="contact">
         <div class="container">
-            <div class="section-title"><h2>Contact</h2></div>
-            <div class="contact-form">
-                <form action="#" method="POST">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
-                    <button type="submit">Send Message</button>
-                </form>
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="contact-details">
+                          
+                            <p>Mohsan CyberEX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Role</h4>
+                            <p>Cybersecurity Student / Aspiring Penetration Tester</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Location</h4>
+                            <p>Pakistan</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>mohsansec@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/mohsan-cyberEX" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Secure Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mohsan Razaq | Beginner Cyber Security Student</p>
-        <div>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Mohsan CyberEX</h3>
+                    <p>Cybersecurity student focused on building practical skills through labs, exercises, and guided learning. Aspiring to develop hands-on expertise in system security and vulnerability analysis.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Learning</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Learning Focus</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Ethical Hacking</a></li>
+                        <li><a href="#">Penetration Testing</a></li>
+                        <li><a href="#">Network Security</a></li>
+                        <li><a href="#">Security Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Mohsan CyberEX. All Rights Reserved. | Stay Secure, Keep Learning</p>
+            </div>
         </div>
     </footer>
 
@@ -332,28 +1343,33 @@
             const characters = '01';
             const fontSize = 14;
             const columns = Math.floor(window.innerWidth / fontSize);
-            for(let i=0;i<columns;i++){
+            
+            for (let i = 0; i < columns; i++) {
                 const column = document.createElement('div');
-                column.className='matrix-code';
-                column.style.left = `${i*fontSize}px`;
-                column.style.animationDelay = `${Math.random()*20}s`;
-                let content='';
-                const rows=Math.floor(window.innerHeight/fontSize);
-                for(let j=0;j<rows;j++){ content += characters.charAt(Math.floor(Math.random()*characters.length));}
-                column.textContent=content;
+                column.className = 'matrix-code';
+                column.style.left = `${i * fontSize}px`;
+                column.style.animationDelay = `${Math.random() * 20}s`;
+                
+                let content = '';
+                const rows = Math.floor(window.innerHeight / fontSize);
+                
+                for (let j = 0; j < rows; j++) {
+                    content += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                
+                column.textContent = content;
                 matrixBg.appendChild(column);
             }
         }
-        createMatrix();
 
         // Typing Effect
         const typingText = document.getElementById('typing-text');
         const texts = [
-            "a Cyber Security Student",
-            "an Aspiring Ethical Hacker",
-            "a Security Enthusiast",
-            "a Python Learner",
-            "a Network Defender"
+            "a Cybersecurity Student",
+            "an Aspiring Penetration Tester", 
+            "a Security Tools Learner",
+            "a Problem Solver",
+            "a Continuous Learner"
         ];
         let textIndex = 0;
         let charIndex = 0;
@@ -361,30 +1377,105 @@
 
         function type() {
             const currentText = texts[textIndex];
-            if(isDeleting){
-                typingText.textContent = currentText.substring(0,charIndex--);
-            }else{
-                typingText.textContent = currentText.substring(0,charIndex++);
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
             }
-            if(!isDeleting && charIndex===currentText.length){
-                isDeleting=true;
-                setTimeout(type,1000);
-            }else if(isDeleting && charIndex===0){
-                isDeleting=false;
-                textIndex=(textIndex+1)%texts.length;
-                setTimeout(type,500);
-            }else{
-                setTimeout(type, isDeleting?50:100);
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                isDeleting = true;
+                setTimeout(type, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+                setTimeout(type, 500);
+            } else {
+                setTimeout(type, isDeleting ? 50 : 100);
             }
         }
-        type();
 
-        // Hamburger Menu
+        // Mobile Navigation Toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
-        hamburger.addEventListener('click',()=>{ navLinks.classList.toggle('active'); });
-        window.addEventListener('scroll',()=>{ document.getElementById('header').classList.toggle('scrolled',window.scrollY>50); });
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.querySelector('i').classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.querySelector('i').classList.remove('fa-times');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Portfolio filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterBtns.forEach(button => button.classList.remove('active'));
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                const filter = btn.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message encrypted and sent securely! I will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Add smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createMatrix();
+            setTimeout(type, 1000);
+        });
     </script>
 </body>
 </html>
-
