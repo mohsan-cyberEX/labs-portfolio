@@ -948,7 +948,7 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="logo">mohsan<span>_cyberEX</span></a>
+                <a href="#" class="logo">mohsan<span>_cyber</span></a>
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -965,71 +965,20 @@
     </header>
 
     <!-- Hero Section -->
-    <!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="container">
-        <div class="hero-content">
-            <h1>Hello, I'm <span class="name">Mohsan CyberEX</span></h1>
-            <h2>I am a <span class="typed-text"></span><span class="cursor">|</span></h2>
-            <p>Learning & practicing penetration testing, C++, and Data Structures & Algorithms step by step.</p>
-            <a href="#portfolio" class="btn">View My Work</a>
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>MOH SAN CYBER<span>EX</span></h1>
+                <p>I'm <span class="typing-text" id="typing-text"></span></p>
+                <p>A cybersecurity student actively learning ethical hacking, penetration testing, and system security. Focused on building practical skills through labs, exercises, and guided learning.</p>
+                <div class="hero-btns">
+                    <a href="#portfolio" class="btn btn-primary">View My Learning</a>
+                    <a href="#contact" class="btn btn-outline">Contact Me</a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
-<script>
-    // Typing Effect
-    const typedTextSpan = document.querySelector(".typed-text");
-    const cursorSpan = document.querySelector(".cursor");
-
-    const textArray = ["Cybersecurity Enthusiast", "C++ Programmer", "DSA Learner"];
-    const typingDelay = 100;
-    const erasingDelay = 50;
-    const newTextDelay = 1500; // Pause before next text
-    let textArrayIndex = 0;
-    let charIndex = 0;
-
-    function type() {
-        if (charIndex < textArray[textArrayIndex].length) {
-            typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-            charIndex++;
-            setTimeout(type, typingDelay);
-        } else {
-            setTimeout(erase, newTextDelay);
-        }
-    }
-
-    function erase() {
-        if (charIndex > 0) {
-            typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, erasingDelay);
-        } else {
-            textArrayIndex++;
-            if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-            setTimeout(type, typingDelay + 500);
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", function () {
-        if (textArray.length) setTimeout(type, newTextDelay + 250);
-    });
-</script>
-
-<style>
-    .cursor {
-        display: inline-block;
-        background-color: #000;
-        width: 2px;
-        margin-left: 2px;
-        animation: blink 0.7s infinite;
-    }
-
-    @keyframes blink {
-        0%, 50%, 100% { opacity: 1; }
-        25%, 75% { opacity: 0; }
-    }
-</style>
+        <div class="hero-shape"></div>
+    </section>
 
     <!-- About Section -->
     <section class="section about" id="about">
@@ -1070,147 +1019,218 @@
     </section>
 
     <!-- Skills Section -->
-   <!-- Skills Section -->
-<section class="skills" id="skills">
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-cogs"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-shield-alt"></i> Cybersecurity Tools</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Nmap</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-chart-bar"></i>
+                            <span>Wireshark</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Burp Suite</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Kali Linux</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-network-wired"></i> Networking & Protocols</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-wifi"></i>
+                            <span>TCP/IP</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-globe"></i>
+                            <span>DNS</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-server"></i>
+                            <span>HTTP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-linux"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-lightbulb"></i> Other Skills</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Problem-solving</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-flask"></i>
+                            <span>Lab Simulations</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Code Debugging</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Portfolio Section -->
+<section class="portfolio" id="portfolio">
     <div class="container">
-        <h2>My Skills</h2>
-        <div class="skill">
-            <h3>C++ Programming</h3>
-            <div class="skill-bar">
-                <div class="skill-fill" style="width: 85%"></div>
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="python_project.png" alt="Python Project">
+                <div class="project-info">
+                    <h3>Python Basics</h3>
+                    <p>Small Python programs practicing loops, conditionals, functions, and file handling.</p>
+                    <a href="#" target="_blank">View Code</a>
+                </div>
             </div>
-        </div>
-        <div class="skill">
-            <h3>Data Structures & Algorithms</h3>
-            <div class="skill-bar">
-                <div class="skill-fill" style="width: 80%"></div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="cpp_dsa.png" alt="C++ & DSA Project">
+                <div class="project-info">
+                    <h3>C++ DSA Practice</h3>
+                    <p>Implemented arrays, linked lists, stacks, queues, and basic sorting/search algorithms.</p>
+                    <a href="#" target="_blank">View Code</a>
+                </div>
             </div>
-        </div>
-        <div class="skill">
-            <h3>Cybersecurity / Pentesting</h3>
-            <div class="skill-bar">
-                <div class="skill-fill" style="width: 70%"></div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="htb_labs.png" alt="HTB Labs Project">
+                <div class="project-info">
+                    <h3>Cybersecurity Labs</h3>
+                    <p>Hands-on practice with HTB labs, penetration testing basics, and vulnerability exploration.</p>
+                    <a href="#" target="_blank">View Code</a>
+                </div>
             </div>
-        </div>
-        <div class="skill">
-            <h3>Networking & Linux</h3>
-            <div class="skill-bar">
-                <div class="skill-fill" style="width: 60%"></div>
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="python_app.png" alt="Python App Project">
+                <div class="project-info">
+                    <h3>Python Mini Project</h3>
+                    <p>Developed beginner-friendly apps like calculators, text analyzers, and data processors.</p>
+                    <a href="#" target="_blank">View Code</a>
+                </div>
+            </div>
+            <!-- Project 5 -->
+            <div class="project-card">
+                <img src="cpp_algo.png" alt="C++ Algorithm Project">
+                <div class="project-info">
+                    <h3>C++ Algorithms</h3>
+                    <p>Implemented classic algorithms: binary search, recursion, sorting, and simple DP problems.</p>
+                    <a href="#" target="_blank">View Code</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
 <style>
-    .skills {
+    .portfolio {
         padding: 60px 0;
-        background-color: #f5f5f5;
+        background-color: #fff;
         text-align: center;
     }
 
-    .skills h2 {
+    .portfolio h2 {
         font-size: 2.5rem;
         margin-bottom: 40px;
     }
 
-    .skill {
-        margin-bottom: 25px;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .project-card {
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
         text-align: left;
     }
 
-    .skill h3 {
-        margin-bottom: 8px;
-        font-size: 1.2rem;
+    .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .skill-bar {
+    .project-card img {
         width: 100%;
-        height: 20px;
-        background-color: #ddd;
-        border-radius: 10px;
-        overflow: hidden;
+        height: 180px;
+        object-fit: cover;
     }
 
-    .skill-fill {
-        height: 100%;
-        width: 0;
-        background: linear-gradient(90deg, #007bff, #00d4ff);
-        border-radius: 10px;
-        animation: fillSkill 2s forwards;
+    .project-info {
+        padding: 15px 20px;
     }
 
-    @keyframes fillSkill {
-        from { width: 0; }
-        to { width: var(--skill-width); }
+    .project-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .project-info a {
+        text-decoration: none;
+        color: #fff;
+        background-color: #007bff;
+        padding: 8px 15px;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .project-info a:hover {
+        background-color: #0056b3;
     }
 </style>
-
-<script>
-    // Animate each skill bar
-    document.querySelectorAll('.skill-fill').forEach(bar => {
-        bar.style.setProperty('--skill-width', bar.style.width);
-    });
-</script>
-
-   <!-- Portfolio Section -->
-<section class="section portfolio" id="portfolio">
-    <div class="container">
-        <div class="section-title">
-            <h2>Learning & Practice</h2>
-        </div>
-        <div class="portfolio-filters" role="tablist">
-            <button class="filter-btn active" data-filter="all" aria-label="Show All Items">All</button>
-            <button class="filter-btn" data-filter="labs" aria-label="Show Labs Items">Labs</button>
-            <button class="filter-btn" data-filter="coding" aria-label="Show Coding Items">Coding</button>
-            <button class="filter-btn" data-filter="networking" aria-label="Show Networking Items">Networking</button>
-        </div>
-        <div class="portfolio-grid">
-            <!-- Portfolio Item Example -->
-            <div class="portfolio-item" data-category="labs">
-                <div class="portfolio-img">
-                    HTB Labs
-                </div>
-                <div class="portfolio-content">
-                    <h3>HTB Labs & CTFs</h3>
-                    <p>Practice hacking challenges and vulnerability analysis through Hack The Box labs and Capture The Flag exercises to develop practical penetration testing skills.</p>
-                    <div class="portfolio-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> HTB Profile</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Repeat other items similarly -->
-        </div>
-    </div>
-</section>
-
-<script>
-    // Portfolio Filtering
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active from all buttons
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            const filter = btn.dataset.filter;
-
-            portfolioItems.forEach(item => {
-                if (filter === 'all' || item.dataset.category === filter) {
-                    item.style.display = 'block';
-                    item.style.opacity = 1;
-                } else {
-                    item.style.opacity = 0;
-                    setTimeout(() => item.style.display = 'none', 300);
-                }
-            });
-        });
-    });
-</script>
 
 
     <!-- Education Section -->
@@ -1257,7 +1277,7 @@
                             <i class="fas fa-user"></i>
                         </div>
                         <div class="contact-details">
-                          <h4>Full Name</h4>
+                            <h4>Full Name</h4>
                             <p>Mohsan CyberEX</p>
                         </div>
                     </div>
@@ -1345,7 +1365,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Mohsan CyberEX. All Rights Reserved. | Stay Secure, Keep Learning</p>
+                <p>&copy; 2023 Mohsan CyberEX. All Rights Reserved. | Stay Secure, Keep Learning</p>
             </div>
         </div>
     </footer>
