@@ -1108,93 +1108,63 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section class="section portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Learning & Practice</h2>
-            </div>
-            <div class="portfolio-filters">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="labs">Labs</button>
-                <button class="filter-btn" data-filter="coding">Coding</button>
-                <button class="filter-btn" data-filter="networking">Networking</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item" data-category="labs">
-                    <div class="portfolio-img">
-                        HTB Labs
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>HTB Labs & CTFs</h3>
-                        <p>Practice hacking challenges and vulnerability analysis through Hack The Box labs and Capture The Flag exercises to develop practical penetration testing skills.</p>
-                        <div class="portfolio-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> HTB Profile</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="coding">
-                    <div class="portfolio-img">
-                        Terminal Portfolio
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Terminal Portfolio</h3>
-                        <p>Learning to build a personal portfolio with interactive terminal UI to showcase skills and projects in a unique, cybersecurity-themed interface.</p>
-                        <div class="portfolio-links">
-                            <a href="#"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="coding">
-                    <div class="portfolio-img">
-                        C++ Data Structures
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>C++ Data Structures Labs</h3>
-                        <p>Implementing linked lists, stacks, queues, and trees to build a strong programming foundation for security tool development and algorithm understanding.</p>
-                        <div class="portfolio-links">
-                            <a href="#"><i class="fab fa-github"></i> Code Examples</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="networking">
-                    <div class="portfolio-img">
-                        Networking Labs
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Networking Labs</h3>
-                        <p>Setting up virtual networks, capturing packets with Wireshark, and analyzing network traffic to understand protocols and identify potential security issues.</p>
-                        <div class="portfolio-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Lab Notes</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="labs">
-                    <div class="portfolio-img">
-                        Security Tools
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Security Tools Practice</h3>
-                        <p>Hands-on experience with Nmap for network scanning, Wireshark for packet analysis, and Burp Suite for web application security testing.</p>
-                        <div class="portfolio-links">
-                            <a href="#"><i class="fas fa-external-link-alt"></i> Tool Configs</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="portfolio-item" data-category="coding">
-                    <div class="portfolio-img">
-                        Script Development
-                    </div>
-                    <div class="portfolio-content">
-                        <h3>Python Script Development</h3>
-                        <p>Creating basic security scripts and automation tools in Python to understand how security tools work and develop custom solutions.</p>
-                        <div class="portfolio-links">
-                            <a href="#"><i class="fab fa-github"></i> Scripts</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+   <!-- Portfolio Section -->
+<section class="section portfolio" id="portfolio">
+    <div class="container">
+        <div class="section-title">
+            <h2>Learning & Practice</h2>
         </div>
-    </section>
+        <div class="portfolio-filters" role="tablist">
+            <button class="filter-btn active" data-filter="all" aria-label="Show All Items">All</button>
+            <button class="filter-btn" data-filter="labs" aria-label="Show Labs Items">Labs</button>
+            <button class="filter-btn" data-filter="coding" aria-label="Show Coding Items">Coding</button>
+            <button class="filter-btn" data-filter="networking" aria-label="Show Networking Items">Networking</button>
+        </div>
+        <div class="portfolio-grid">
+            <!-- Portfolio Item Example -->
+            <div class="portfolio-item" data-category="labs">
+                <div class="portfolio-img">
+                    HTB Labs
+                </div>
+                <div class="portfolio-content">
+                    <h3>HTB Labs & CTFs</h3>
+                    <p>Practice hacking challenges and vulnerability analysis through Hack The Box labs and Capture The Flag exercises to develop practical penetration testing skills.</p>
+                    <div class="portfolio-links">
+                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> HTB Profile</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat other items similarly -->
+        </div>
+    </div>
+</section>
+
+<script>
+    // Portfolio Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.dataset.filter;
+
+            portfolioItems.forEach(item => {
+                if (filter === 'all' || item.dataset.category === filter) {
+                    item.style.display = 'block';
+                    item.style.opacity = 1;
+                } else {
+                    item.style.opacity = 0;
+                    setTimeout(() => item.style.display = 'none', 300);
+                }
+            });
+        });
+    });
+</script>
+
 
     <!-- Education Section -->
     <section class="section education" id="education">
