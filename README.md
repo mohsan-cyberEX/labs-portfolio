@@ -55,7 +55,7 @@ This is my portfolio website showcasing my **skills, mini-projects, and educatio
 ## 📫 Contact Me
 
 - Email: `mohsan_sec@gmail.com`  
-- LinkedIn: [linkedin.com/in/yourprofile](#)  
+- LinkedIn: [linkedin.com/in/not-yet](#)  
 - GitHub: [github.com/mohsan-cyberEX](https://github.com/mohsan-cyberEX)
 
 Feel free to reach out for collaboration, mentorship, or internship opportunities.
